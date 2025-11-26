@@ -1,0 +1,26 @@
+[project]
+name = "langchain-rag"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Dirk Papenberg",email = "dirk.papenberg@nttdata.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "langchain[openai] (>=0.3.25,<0.4.0)",
+    "langchain-weaviate (>=0.0.4,<0.0.5)",
+    "langchain-community (>=0.3.24,<0.4.0)",
+    "langgraph (>=0.4.7,<0.5.0)",
+    "streamlit (>=1.51.0,<2.0.0)",
+    "pypdf (>=6.4.0,<7.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "langchain_rag", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
