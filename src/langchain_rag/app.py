@@ -18,7 +18,6 @@ load_dotenv()
 streamlit.title("LangChain OpenAI RAG")
 
 llm = AzureChatOpenAI(model="gpt-4o")
-#rag_prompt = hub.pull("rlm/rag-prompt")
 rag_template = PromptTemplate.from_template("Please answer this question '{question}' and only use the following context '{context}'")
 client = weaviate.connect_to_local()
 collection_name = "document_chunks_202506"
