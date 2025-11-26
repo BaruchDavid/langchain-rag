@@ -56,7 +56,6 @@ if file and prompt:
         docs_content = "\n\n".join(doc.page_content for doc in retrieved_docs)
 
         # Query the LLM with the prompt
-        #langhchain_prompt = rag_prompt.invoke({"question": prompt, "context": docs_content})
         langhchain_prompt = rag_template.invoke({"question": prompt, "context": docs_content})
         
         answer = llm.invoke(langhchain_prompt)
